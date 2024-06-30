@@ -7,6 +7,9 @@ import Root from './components/Root/Root.jsx'
 import Login from './components/Login/Login.jsx'
 import Register from './components/Register/Register.jsx'
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx'
+import PersonalData from './components/PersonalData/PersonalData.jsx'
 
 
 const router = createBrowserRouter([
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>
       },
+      {
+        path: "/about",
+        element: <ProtectedRoute>
+          <div>I am about</div>
+        </ProtectedRoute>
+      },
+      {
+        path: "/personalData",
+        element:<PrivateRoute>
+          <PersonalData ></PersonalData>
+        </PrivateRoute>
+      }
     ]
   }
 ])

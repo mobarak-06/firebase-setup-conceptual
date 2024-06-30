@@ -19,26 +19,26 @@ const Register = () => {
     setEmailError('')
     setRegisterError('')
 
-    if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)) {
-        setEmailError('provide a valid email like ..@gmail.com')
-        return;
-    }
-    if (password.length < 6) {
-        setRegisterError('password should be 6 characters')
-        return;
-    }
-    if (password !== confirmPassword) {
-        setRegisterError('password do not match')
-        return;
-    }
-    if (!/\d{2}$/.test(password)) {
-        setRegisterError("password must end at least 2 digit")
-        return
-    }
-    if (!/[@#%&!]/.test(password)) {
-        setRegisterError('please add a special character like @,#,%,!')
-        return
-    }
+    // if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)) {
+    //     setEmailError('provide a valid email like ..@gmail.com')
+    //     return;
+    // }
+    // if (password.length < 6) {
+    //     setRegisterError('password should be 6 characters')
+    //     return;
+    // }
+    // if (password !== confirmPassword) {
+    //     setRegisterError('password do not match')
+    //     return;
+    // }
+    // if (!/\d{2}$/.test(password)) {
+    //     setRegisterError("password must end at least 2 digit")
+    //     return
+    // }
+    // if (!/[@#%&!]/.test(password)) {
+    //     setRegisterError('please add a special character like @,#,%,!')
+    //     return
+    // }
 
     
     registerUser(email, password)
